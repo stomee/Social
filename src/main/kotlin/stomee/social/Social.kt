@@ -16,6 +16,7 @@ class Social : Extension() {
     override fun terminate() {
         DiscordCommand.unregister()
         MessageCommand.unregister()
+
         logger.info("[Social] has been disabled!")
     }
 
