@@ -15,6 +15,6 @@ fun hook(player: Player) {
     }
 
     player.addEventCallback<PlayerDisconnectEvent> {
-        Audiences.all().sendMessage(Component.text("${player.username} has left the game!", NamedTextColor.AQUA)
+        Audiences.all().sendMessage(Component.text("${player.username} has left the game!", NamedTextColor.AQUA))
     }
 }
