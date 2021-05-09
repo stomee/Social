@@ -7,6 +7,6 @@ import world.cepi.kstom.adventure.asMini
 
 fun tablistHook(player: Player) {
     player.addEventCallback<PlayerSpawnEvent> {
-        player.sendPlayerListHeader("<gradient:purple:blue>stomee".asMini())
+        player.sendPlayerListHeader("<gradient:dark_purple:blue>stomee</gradient>".asMini())
     }
 }
