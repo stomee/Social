@@ -9,7 +9,7 @@ import net.minestom.server.event.player.PlayerSpawnEvent
 import world.cepi.kstom.addEventCallback
 import javax.swing.text.AbstractDocument
 
-fun hook(player: Player) {
+fun joinLeaveHook(player: Player) {
     player.addEventCallback<PlayerSpawnEvent> {
         Audiences.all().sendMessage(Component.text("${player.username} has joined the game!", NamedTextColor.BLUE))
     }

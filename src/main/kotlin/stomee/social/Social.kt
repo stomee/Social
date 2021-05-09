@@ -3,6 +3,7 @@ package stomee.social
 import net.minestom.server.extensions.Extension;
 import stomee.social.message.MessageCommand
 import stomee.social.message.ReplyCommand
+import stomee.social.message.tablistHook
 import world.cepi.kstom.Manager
 import world.cepi.kstom.command.register
 import world.cepi.kstom.command.unregister
@@ -11,7 +12,8 @@ class Social : Extension() {
 
     override fun initialize() {
 
-        Manager.connection.addPlayerInitialization(::hook)
+        Manager.connection.addPlayerInitialization(::joinLeaveHook)
+        Manager.connection.addPlayerInitialization(::tablistHook)
 
         DiscordCommand.register()
         MessageCommand.register()
@@ -22,7 +24,8 @@ class Social : Extension() {
 
     override fun terminate() {
 
-        Manager.connection.removePlayerInitialization(::hook)
+        Manager.connection.removePlayerInitialization(::joinLeaveHook)
+        Manager.connection.addPlayerInitialization(::tablistHook)
 
         DiscordCommand.unregister()
         MessageCommand.unregister()
