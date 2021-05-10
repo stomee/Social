@@ -12,7 +12,7 @@ object DiscordCommand : SimpleKommand("discord", process = { sender, _, _ ->
         Component.text("Discord: ", NamedTextColor.DARK_PURPLE)
             .append(Component.text(discordURL, NamedTextColor.WHITE)
                 .clickEvent(ClickEvent.openUrl(discordURL))
-                .hoverEvent(HoverEvent.showText(Component.text("Click here to join our discord!", NamedTextColor.BLUE)))
+                .hoverEvent(HoverEvent.showText(Component.text("Click here to join the discord!", StomeeColors.blueColor)))
             )
     )
 

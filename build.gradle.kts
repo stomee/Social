@@ -46,7 +46,7 @@ dependencies {
     compileOnly("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.0")
 
     // import kstom
-    compileOnly("com.github.Project-Cepi:KStom:62ae2ba71f")
+    compileOnly("com.github.Project-Cepi:KStom:870100f6c1")
 }
 tasks.withType<Test> {
     useJUnitPlatform()

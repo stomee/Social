@@ -3,7 +3,6 @@ package stomee.social
 import net.minestom.server.extensions.Extension;
 import stomee.social.message.MessageCommand
 import stomee.social.message.ReplyCommand
-import stomee.social.message.tablistHook
 import world.cepi.kstom.Manager
 import world.cepi.kstom.command.register
 import world.cepi.kstom.command.unregister

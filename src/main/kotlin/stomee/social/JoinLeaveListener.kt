@@ -10,11 +10,19 @@ import world.cepi.kstom.addEventCallback
 import javax.swing.text.AbstractDocument
 
 fun joinLeaveHook(player: Player) {
+
     player.addEventCallback<PlayerSpawnEvent> {
-        Audiences.all().sendMessage(Component.text("${player.username} has joined the game!", NamedTextColor.BLUE))
+
+        player.clearTitle() // clear any max time titles
+
+        Audiences.all().sendMessage(
+            Component.text("${player.username} has joined the game!", StomeeColors.blueColor)
+        )
     }
 
     player.addEventCallback<PlayerDisconnectEvent> {
-        Audiences.all().sendMessage(Component.text("${player.username} has left the game!", NamedTextColor.AQUA))
+        Audiences.all().sendMessage(
+            Component.text("${player.username} has left the game!", StomeeColors.purpleColor)
+        )
     }
 }
